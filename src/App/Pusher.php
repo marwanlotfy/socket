@@ -63,6 +63,6 @@ class Pusher implements MessageComponentInterface {
 
     public function isServer($msg)
     {
-        return ($msg->userId == env('MAIN_SERVER_ID') && $msg->token == env('MAIN_SERVER_SECRET'));
+        return ($msg->userId == getenv('MAIN_SERVER_ID') && $msg->token == getenv('MAIN_SERVER_SECRET'));
     }
 }
